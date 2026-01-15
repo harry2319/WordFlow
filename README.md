@@ -1,5 +1,9 @@
 WordFlow 🌊
-WordFlow is a minimalist, browser-based utility designed to generate random English text strings instantly. It serves as a modern, readable alternative to traditional "Lorem Ipsum" generators, wrapped in a sleek, developer-friendly dark interface.
+
+[![View Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen?style=for-the-badge)](https://harry2319.github.io/WordFlow/)
+
+
+**WordFlow** is a minimalist, browser-based utility designed to generate random English text strings instantly. It serves as a modern, readable alternative to traditional "Lorem Ipsum" generators, wrapped in a sleek, developer-friendly dark interface.
 
 📖 What is it?
 WordFlow is a lightweight, single-page application built with pure HTML5, CSS3, and Vanilla JavaScript. It allows users to input a specific number and instantly receive a randomized flow of words from a curated library of 200 English nouns.

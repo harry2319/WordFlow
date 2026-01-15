@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOREM</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 20px;
+            background-color: #1f1f1f;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #FFD700;
+            /* Yellow border */
+            border-radius: 5px;
+            background-color: #2a2a2a;
+            color: #ffffff;
+            outline: none;
+        }
+
+        input[type="number"]::placeholder {
+            color: #aaaaaa;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #FFD700;
+            /* Yellow button */
+            color: #000000;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e6c200;
+            /* Darker yellow on hover */
+        }
+
+        .mainbody {
+            padding: 20px;
+        }
+
+        .mainbody p {
+            background-color: #1e1e1e;
+            padding: 15px;
+            margin: 10px 0;
+            border-left: 5px solid #FFD700;
+            /* Yellow border */
+            border-radius: 5px;
+            font-size: 16px;
+            word-wrap: break-word;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <header id="head">
+        <input type="number" id="input" placeholder="enter the number">
+        <button id="submitBtn">Submit</button>
+    </header>
+    <main class="mainbody">
+
+    </main>
+    <script>
+
+
+        function submit() {
+
+            var inputvalue = document.getElementById("input").value;
+            if(inputvalue<0){
+                alert("Invalid input");
+            }
+            if (inputvalue < 100000000000000000000000000 && inputvalue > 0) {
+                var pp = "";
+                for (i = 1; i <= inputvalue; i++) {
+                    let arr = [
+                        "jacket", "knee", "car", "brush", "river", "mountain", "key", "grape", "alarm", "drum",
+                        "cloud", "zebra", "volcano", "xray", "mountain", "xray", "lamp", "drum", "alarm", "grape",
+                        "bridge", "grape", "ice", "mirror", "frog", "grape", "drum", "ice", "zebra", "valley",
+                        "snake", "car", "fan", "net", "mirror", "glove", "plant", "owl", "dream", "zip",
+                        "ice", "ring", "desk", "nest", "unit", "cloud", "snake", "mirror", "arrow", "grape",
+                        "dog", "grape", "nest", "arrow", "lamp", "glove", "bridge", "xenon", "tiger", "star",
+                        "zebra", "lamp", "quiz", "gold", "use", "violin", "zebra", "dream", "island", "notebook",
+                        "bridge", "snake", "glove", "lamp", "object", "ink", "arrow", "grape", "quiet", "quiz",
+                        "notebook", "quiz", "glove", "bridge", "xray", "plant", "fan", "cloud", "milk", "valley",
+                        "use", "pencil", "island", "drum", "nest", "apple", "mirror", "grape", "jacket", "arrow",
+                        "ink", "nest", "snake", "lamp", "gold", "feather", "frog", "guitar", "sun", "table",
+                        "quiz", "grape", "car", "violin", "engine", "nest", "ant", "quiet", "grape", "snake",
+                        "arrow", "ring", "xray", "alarm", "snake", "mirror", "key", "nest", "mirror", "dog",
+                        "grape", "tiger", "dog", "apple", "use", "fan", "pen", "nest", "lamp", "robot",
+                        "jewel", "ink", "plant", "arrow", "bridge", "glove", "desk", "apple", "apple", "violin",
+                        "bridge", "jewel", "quiet", "jacket", "milk", "alarm", "zebra", "quiz", "table", "dog",
+                        "xray", "arrow", "robot", "fan", "zebra", "alarm", "owl", "dog", "snake", "ice",
+                        "grape", "pencil", "frog", "guitar", "zebra", "use", "zebra", "feather", "jewel", "grape",
+                        "net", "fan", "snake", "xenon", "snake", "snake", "snake", "net", "lamp", "plant"
+                    ];
+                    pp = `${pp} ${(arr[Math.trunc(Math.random() * 199)])}`
+
+                    document.getElementById("input").value = ""
+
+                }
+
+
+                var a = document.createElement("p");
+                a.textContent = pp;
+                a.id = "tempPara";
+                document.querySelector(".mainbody").appendChild(a);
+                var inputvalue = document.getElementById("input").textContent;
+                console.log(inputvalue)
+
+
+            }
+        }
+        const copywala = () => {
+            let bkt = document.querySelector(".mainbody").innerText;
+            if (
+                navigator.clipboard.writeText(bkt)) {
+                alert("Text copied to clipboard!")
+            } else { alert("Failed to copy text") }
+
+            document.querySelector(".mainbody").innerHTML = "";
+
+
+        }
+
+        document.getElementById("input").addEventListener("keydown", function (e) {
+            if (e.key === "Enter") {
+                submit(); // You can call the submit function directly
+            }
+        });
+        document.getElementById("submitBtn").addEventListener("click", submit);
+        document.querySelector(".mainbody").addEventListener("click", copywala)
+    </script>
+</body>
+
+</html>

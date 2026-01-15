@@ -92,9 +92,14 @@
 
             var inputvalue = document.getElementById("input").value;
             if(inputvalue<0){
-                alert("Invalid input");
+               alert("Invalid input: Please enter a positive number.");
+                  return;
             }
-            if (inputvalue < 100000000000000000000000000 && inputvalue > 0) {
+           else if (inputvalue > 1000) {
+        alert("Maximum limit exhausted: Please enter 1000 or less.");
+        return;
+    }
+          else   if (inputvalue < 1000 && inputvalue > 0) {
                 var pp = "";
                 for (i = 1; i <= inputvalue; i++) {
                     let arr = [
